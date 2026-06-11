@@ -1,0 +1,1187 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sekolah Islam Pluit Raya Jakarta</title>
+    <meta name="description" content="Sekolah Islam Pluit Raya Jakarta — SDIT, SMPIT, SMK, Madrasah Diniyah, Kursus Bahasa Inggris, Penjaringan, Jakarta Utara" />
+    <link rel="icon" href="/logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;0,14..32,800;1,14..32,400&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar" id="navbar">
+      <div class="nav-container">
+        <a href="#beranda" class="nav-brand" onclick="navigateTo('beranda')">
+          <img src="images/logo-smpit.png" alt="Logo Sekolah Islam Pluit Raya" class="nav-logo">
+          <div class="nav-brand-text">
+            <span class="brand-main">Sekolah Islam</span>
+            <span class="brand-sub">Pluit Raya Jakarta</span>
+          </div>
+        </a>
+
+        <div class="nav-right">
+          <!-- Language Toggle -->
+          <div class="lang-toggle">
+            <button id="lang-btn-id" class="lang-btn lang-active" onclick="setLanguage('id')">ID</button>
+            <span class="lang-sep">|</span>
+            <button id="lang-btn-en" class="lang-btn" onclick="setLanguage('en')">EN</button>
+          </div>
+
+          <button class="hamburger" id="hamburger" aria-label="Menu">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#beranda" class="nav-link active" onclick="navigateTo('beranda')"><span data-i18n="nav-beranda">Beranda</span></a></li>
+          <li class="dropdown">
+            <a href="#profil" class="nav-link" onclick="navigateTo('profil')"><span data-i18n="nav-profil">Profil</span> <i class="fa fa-chevron-down fa-xs"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="#profil" onclick="navigateTo('profil'); setTab('profil','visi-misi')"><span data-i18n="drop-visimisi">Visi & Misi</span></a></li>
+              <li><a href="#profil" onclick="navigateTo('profil'); setTab('profil','sejarah')"><span data-i18n="drop-sejarah">Sejarah</span></a></li>
+              <li><a href="#profil" onclick="navigateTo('profil'); setTab('profil','dakwah')"><span data-i18n="drop-dakwah">Dakwah</span></a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#jenjang" class="nav-link" onclick="navigateTo('jenjang')"><span data-i18n="nav-jenjang">Jenjang Sekolah</span> <i class="fa fa-chevron-down fa-xs"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="#jenjang" onclick="navigateTo('jenjang'); setTab('jenjang','sdit')"><span data-i18n="drop-sdit">SDIT</span></a></li>
+              <li><a href="#jenjang" onclick="navigateTo('jenjang'); setTab('jenjang','smpit')"><span data-i18n="drop-smpit">SMPIT</span></a></li>
+              <li><a href="#jenjang" onclick="navigateTo('jenjang'); setTab('jenjang','smk')"><span data-i18n="drop-smk">SMK</span></a></li>
+              <li><a href="#jenjang" onclick="navigateTo('jenjang'); setTab('jenjang','madrasah')"><span data-i18n="drop-madrasah">Madrasah Diniyah</span></a></li>
+              <li><a href="#jenjang" onclick="navigateTo('jenjang'); setTab('jenjang','kursus')"><span data-i18n="drop-kursus">Kursus Bahasa Inggris</span></a></li>
+              <li><a href="#jenjang" onclick="navigateTo('jenjang'); setTab('jenjang','osis')"><span data-i18n="drop-osis">OSIS</span></a></li>
+              <li><a href="#jenjang" onclick="navigateTo('jenjang'); setTab('jenjang','pembinaan')"><span data-i18n="drop-pembinaan">Pembinaan</span></a></li>
+            </ul>
+          </li>
+          <li><a href="#penerimaan" class="nav-link" onclick="navigateTo('penerimaan')"><span data-i18n="nav-penerimaan">Penerimaan Siswa</span></a></li>
+          <li class="dropdown">
+            <a href="#informasi" class="nav-link" onclick="navigateTo('informasi')"><span data-i18n="nav-informasi">Informasi</span> <i class="fa fa-chevron-down fa-xs"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="#informasi" onclick="navigateTo('informasi'); setTab('informasi','kurikulum')"><span data-i18n="drop-kurikulum">Kurikulum</span></a></li>
+              <li><a href="#informasi" onclick="navigateTo('informasi'); setTab('informasi','ekstra')"><span data-i18n="drop-ekstra">Ekstrakurikuler</span></a></li>
+              <li><a href="#informasi" onclick="navigateTo('informasi'); setTab('informasi','fasilitas')"><span data-i18n="drop-fasilitas">Fasilitas</span></a></li>
+              <li><a href="#informasi" onclick="navigateTo('informasi'); setTab('informasi','kehidupan')"><span data-i18n="drop-kehidupan">Kehidupan Siswa</span></a></li>
+              <li><a href="#informasi" onclick="navigateTo('informasi'); setTab('informasi','prestasi')"><span data-i18n="drop-prestasi">Prestasi</span></a></li>
+            </ul>
+          </li>
+          <li><a href="#guru-staf" class="nav-link" onclick="navigateTo('guru-staf')"><span data-i18n="nav-guru">Guru & Staf</span></a></li>
+          <li><a href="#kontak" class="nav-link" onclick="navigateTo('kontak')"><span data-i18n="nav-kontak">Kontak</span></a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- PAGE: BERANDA -->
+    <section id="page-beranda" class="page active">
+
+      <!-- Hero -->
+      <div class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+          <div class="hero-badge">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ</div>
+          <h1 class="hero-title">Sekolah Islam Pluit Raya Jakarta</h1>
+          <p class="hero-subtitle" data-i18n="hero-subtitle">Membentuk Generasi Islami yang Berilmu, Berakhlak Mulia, dan Berdakwah</p>
+          <div class="hero-buttons">
+            <button class="btn btn-primary" onclick="navigateTo('penerimaan')" data-i18n="btn-daftar">Daftar Sekarang</button>
+            <button class="btn btn-outline" onclick="navigateTo('profil')" data-i18n="btn-tentang">Tentang Kami</button>
+          </div>
+        </div>
+        <div class="hero-scroll-hint">
+          <i class="fa fa-chevron-down"></i>
+        </div>
+      </div>
+
+      <!-- Quick Stats -->
+      <div class="stats-bar">
+        <div class="container">
+          <div class="stats-grid">
+            <div class="stat-item">
+              <span class="stat-number">5+</span>
+              <span class="stat-label" data-i18n="stat-unit">Jenjang Pendidikan</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-number">1000+</span>
+              <span class="stat-label" data-i18n="stat-siswa">Siswa Aktif</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-number">50+</span>
+              <span class="stat-label" data-i18n="stat-guru">Tenaga Pendidik</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-number">30+</span>
+              <span class="stat-label" data-i18n="stat-tahun">Tahun Berpengalaman</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- School Levels Quick Access -->
+      <div class="section bg-light">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tag" data-i18n="sec-tag-unit">Jenjang Kami</span>
+            <h2 class="section-title" data-i18n="sec-title-unit">Unit Pendidikan</h2>
+            <p class="section-subtitle" data-i18n="sec-sub-unit">Berbagai jenjang pendidikan Islam berkualitas di bawah satu naungan</p>
+          </div>
+          <div class="cards-grid cards-grid-3">
+            <div class="card card-hover" onclick="navigateTo('jenjang'); setTab('jenjang','sdit')">
+              <div class="card-icon bg-green"><i class="fa fa-child"></i></div>
+              <h3 data-i18n="card-sdit-title">SDIT</h3>
+              <p data-i18n="card-sdit-desc">Sekolah Dasar Islam Terpadu — pendidikan dasar berbasis nilai-nilai Islam</p>
+              <span class="card-link" data-i18n="card-sdit-link">Selengkapnya <i class="fa fa-arrow-right fa-xs"></i></span>
+            </div>
+            <div class="card card-hover" onclick="navigateTo('jenjang'); setTab('jenjang','smpit')">
+              <div class="card-icon bg-red"><i class="fa fa-book-open"></i></div>
+              <h3 data-i18n="card-smpit-title">SMPIT</h3>
+              <p data-i18n="card-smpit-desc">Sekolah Menengah Pertama Islam Terpadu — membentuk karakter Islami</p>
+              <span class="card-link" data-i18n="card-smpit-link">Selengkapnya <i class="fa fa-arrow-right fa-xs"></i></span>
+            </div>
+            <div class="card card-hover" onclick="navigateTo('jenjang'); setTab('jenjang','smk')">
+              <div class="card-icon bg-navy"><i class="fa fa-graduation-cap"></i></div>
+              <h3 data-i18n="card-smk-title">SMK</h3>
+              <p data-i18n="card-smk-desc">Sekolah Menengah Kejuruan dengan program keahlian unggulan</p>
+              <span class="card-link" data-i18n="card-smk-link">Selengkapnya <i class="fa fa-arrow-right fa-xs"></i></span>
+            </div>
+            <div class="card card-hover" onclick="navigateTo('jenjang'); setTab('jenjang','madrasah')">
+              <div class="card-icon bg-gold"><i class="fa fa-mosque"></i></div>
+              <h3 data-i18n="card-md-title">Madrasah Diniyah</h3>
+              <p data-i18n="card-md-desc">Pendidikan agama Islam secara mendalam dan komprehensif</p>
+              <span class="card-link" data-i18n="card-md-link">Selengkapnya <i class="fa fa-arrow-right fa-xs"></i></span>
+            </div>
+            <div class="card card-hover" onclick="navigateTo('jenjang'); setTab('jenjang','kursus')">
+              <div class="card-icon bg-teal"><i class="fa fa-language"></i></div>
+              <h3 data-i18n="card-kursus-title">Kursus Bahasa Inggris</h3>
+              <p data-i18n="card-kursus-desc">Program kursus bahasa Inggris untuk memperluas wawasan global</p>
+              <span class="card-link" data-i18n="card-kursus-link">Selengkapnya <i class="fa fa-arrow-right fa-xs"></i></span>
+            </div>
+            <div class="card card-hover" onclick="navigateTo('jenjang'); setTab('jenjang','pembinaan')">
+              <div class="card-icon bg-purple"><i class="fa fa-users"></i></div>
+              <h3 data-i18n="card-pem-title">Pembinaan</h3>
+              <p data-i18n="card-pem-desc">Program pembinaan karakter dan pengembangan diri siswa</p>
+              <span class="card-link" data-i18n="card-pem-link">Selengkapnya <i class="fa fa-arrow-right fa-xs"></i></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Why Choose Us -->
+      <div class="section">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tag" data-i18n="sec-tag-unggulan">Keunggulan Kami</span>
+            <h2 class="section-title" data-i18n="sec-title-unggulan">Mengapa Memilih Kami?</h2>
+          </div>
+          <div class="features-grid">
+            <div class="feature-item">
+              <div class="feature-icon"><i class="fa fa-quran"></i></div>
+              <div class="feature-text">
+                <h4 data-i18n="feat-kurikulum-title">Kurikulum Terpadu</h4>
+                <p data-i18n="feat-kurikulum-desc">Memadukan kurikulum nasional dengan pendidikan agama Islam secara menyeluruh</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon"><i class="fa fa-chalkboard-teacher"></i></div>
+              <div class="feature-text">
+                <h4 data-i18n="feat-guru-title">Tenaga Pendidik Berkualitas</h4>
+                <p data-i18n="feat-guru-desc">Guru-guru berpengalaman dan berdedikasi dengan latar belakang pendidikan terbaik</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon"><i class="fa fa-star"></i></div>
+              <div class="feature-text">
+                <h4 data-i18n="feat-prestasi-title">Prestasi Unggul</h4>
+                <p data-i18n="feat-prestasi-desc">Raih berbagai prestasi akademik dan non-akademik di tingkat kota hingga nasional</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon"><i class="fa fa-building"></i></div>
+              <div class="feature-text">
+                <h4 data-i18n="feat-fasilitas-title">Fasilitas Lengkap</h4>
+                <p data-i18n="feat-fasilitas-desc">Sarana dan prasarana modern yang mendukung kegiatan belajar mengajar</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon"><i class="fa fa-hands-praying"></i></div>
+              <div class="feature-text">
+                <h4 data-i18n="feat-islami-title">Lingkungan Islami</h4>
+                <p data-i18n="feat-islami-desc">Suasana belajar yang kondusif, Islami, dan menjunjung akhlak mulia</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon"><i class="fa fa-globe"></i></div>
+              <div class="feature-text">
+                <h4 data-i18n="feat-global-title">Wawasan Global</h4>
+                <p data-i18n="feat-global-desc">Membekali siswa dengan kemampuan bahasa asing dan teknologi modern</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA Section -->
+      <div class="cta-section">
+        <div class="container">
+          <div class="cta-content">
+            <h2 data-i18n="cta-title">Bergabunglah dengan Keluarga Besar Sekolah Islam Pluit Raya</h2>
+            <p data-i18n="cta-desc">Daftarkan putra-putri Anda sekarang dan jadikan mereka generasi Islam yang unggul</p>
+            <div class="cta-buttons">
+              <button class="btn btn-white" onclick="navigateTo('penerimaan')" data-i18n="btn-cta1">Informasi Pendaftaran</button>
+              <button class="btn btn-outline-white" onclick="navigateTo('kontak')" data-i18n="btn-cta2">Hubungi Kami</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- PAGE: PROFIL -->
+    <section id="page-profil" class="page">
+      <div class="page-hero page-hero-sm">
+        <div class="page-hero-overlay"></div>
+        <div class="page-hero-content">
+          <h1 data-i18n="ph-profil-title">Profil Sekolah</h1>
+          <p data-i18n="ph-profil-sub">Mengenal Sekolah Islam Pluit Raya lebih dekat</p>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="container">
+          <div class="tabs" id="tabs-profil">
+            <button class="tab-btn active" onclick="setTab('profil','visi-misi')" data-i18n="tab-visimisi">Visi & Misi</button>
+            <button class="tab-btn" onclick="setTab('profil','sejarah')" data-i18n="tab-sejarah">Sejarah</button>
+            <button class="tab-btn" onclick="setTab('profil','dakwah')" data-i18n="tab-dakwah">Dakwah</button>
+          </div>
+
+          <!-- Visi Misi -->
+          <div class="tab-content active" id="tab-profil-visi-misi">
+            <div class="two-col-layout">
+              <div class="two-col-text">
+                <span class="section-tag" data-i18n="profil-tag">Tujuan Kami</span>
+                <h2 data-i18n="profil-h2">Visi & Misi</h2>
+                <div class="visi-card">
+                  <h3><i class="fa fa-eye"></i> <span data-i18n="visi-title">Visi</span></h3>
+                  <p data-i18n="visi-text">Terwujudnya generasi Islam yang berilmu, berakhlak mulia, mandiri, dan mampu berkontribusi nyata bagi masyarakat serta agama Allah SWT.</p>
+                </div>
+                <div class="misi-list">
+                  <h3><i class="fa fa-bullseye"></i> <span data-i18n="misi-title">Misi</span></h3>
+                  <ul>
+                    <li><i class="fa fa-check-circle"></i> <span data-i18n="misi-1">Menyelenggarakan pendidikan Islam terpadu yang berkualitas dan menyenangkan</span></li>
+                    <li><i class="fa fa-check-circle"></i> <span data-i18n="misi-2">Membentuk akhlakul karimah melalui pembiasaan nilai-nilai Islam dalam kehidupan sehari-hari</span></li>
+                    <li><i class="fa fa-check-circle"></i> <span data-i18n="misi-3">Mengembangkan potensi akademik dan non-akademik setiap peserta didik secara optimal</span></li>
+                    <li><i class="fa fa-check-circle"></i> <span data-i18n="misi-4">Menciptakan lingkungan belajar yang Islami, kondusif, dan inovatif</span></li>
+                    <li><i class="fa fa-check-circle"></i> <span data-i18n="misi-5">Mempersiapkan generasi yang siap menghadapi tantangan zaman dengan iman yang kokoh</span></li>
+                    <li><i class="fa fa-check-circle"></i> <span data-i18n="misi-6">Membangun kemitraan yang erat antara sekolah, orang tua, dan masyarakat</span></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="two-col-image">
+                <div class="image-placeholder">
+                  <img src="/logo.png" alt="Logo Sekolah" class="profile-logo">
+                  <div class="motto-box">
+                    <p class="arabic-text">وَمَنْ يَتَّقِ اللَّهَ يَجْعَل لَّهُ مَخْرَجًا</p>
+                    <p class="motto-latin">"Barangsiapa yang bertakwa kepada Allah, niscaya Dia akan mengadakan baginya jalan keluar." (QS. At-Talaq: 2)</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sejarah -->
+          <div class="tab-content" id="tab-profil-sejarah">
+            <div class="section-header">
+              <span class="section-tag" data-i18n="sej-tag">Perjalanan Kami</span>
+              <h2 class="section-title" data-i18n="sej-title">Sejarah Sekolah</h2>
+            </div>
+            <div class="timeline">
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                  <span class="timeline-year" data-i18n="sej-y1">Awal Berdiri</span>
+                  <h4 data-i18n="sej-h1">Pendirian Lembaga</h4>
+                  <p data-i18n="sej-p1">Sekolah Islam Pluit Raya didirikan atas dasar kebutuhan masyarakat Muslim di kawasan Penjaringan, Jakarta Utara, akan pendidikan Islam berkualitas. Berlokasi di Jalan Jembatan Tiga No. 1, sekolah ini hadir sebagai jawaban atas tantangan zaman.</p>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                  <span class="timeline-year" data-i18n="sej-y2">Pengembangan</span>
+                  <h4 data-i18n="sej-h2">Pertumbuhan Pesat</h4>
+                  <p data-i18n="sej-p2">Seiring kepercayaan masyarakat yang terus meningkat, sekolah berkembang membuka berbagai unit pendidikan mulai dari SDIT hingga SMK, serta Madrasah Diniyah untuk memperdalam ilmu agama.</p>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                  <span class="timeline-year" data-i18n="sej-y3">Era Modern</span>
+                  <h4 data-i18n="sej-h3">Modernisasi Pendidikan</h4>
+                  <p data-i18n="sej-p3">Sekolah terus berinovasi mengintegrasikan teknologi dalam pembelajaran, membuka program kursus bahasa Inggris, dan mengembangkan kurikulum terpadu yang berpadu antara ilmu umum dan agama.</p>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                  <span class="timeline-year" data-i18n="sej-y4">Kini</span>
+                  <h4 data-i18n="sej-h4">Sekolah Unggulan Jakarta Utara</h4>
+                  <p data-i18n="sej-p4">Saat ini Sekolah Islam Pluit Raya telah menjadi salah satu lembaga pendidikan Islam terpercaya di Jakarta Utara, dengan ribuan alumni yang tersebar di berbagai bidang dan penjuru Indonesia.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dakwah -->
+          <div class="tab-content" id="tab-profil-dakwah">
+            <div class="section-header">
+              <span class="section-tag" data-i18n="dak-tag">Misi Dakwah</span>
+              <h2 class="section-title" data-i18n="dak-title">Dakwah & Nilai Islam</h2>
+              <p class="section-subtitle" data-i18n="dak-sub">Sekolah Islam Pluit Raya bukan sekadar lembaga pendidikan, tetapi juga sarana dakwah dalam menegakkan nilai-nilai Islam</p>
+            </div>
+            <div class="dakwah-content">
+              <div class="dakwah-quote">
+                <p class="arabic-text large">ادْعُ إِلَىٰ سَبِيلِ رَبِّكَ بِالْحِكْمَةِ وَالْمَوْعِظَةِ الْحَسَنَةِ</p>
+                <p>"Serulah (manusia) kepada jalan Tuhanmu dengan hikmah dan pelajaran yang baik." (QS. An-Nahl: 125)</p>
+              </div>
+              <div class="cards-grid cards-grid-3">
+                <div class="card">
+                  <div class="card-icon bg-green"><i class="fa fa-book-quran"></i></div>
+                  <h3 data-i18n="dak-c1-title">Tahfizh Al-Quran</h3>
+                  <p data-i18n="dak-c1-desc">Program hafalan Al-Quran terintegrasi dalam kurikulum sekolah, membentuk generasi Qurani.</p>
+                </div>
+                <div class="card">
+                  <div class="card-icon bg-red"><i class="fa fa-mosque"></i></div>
+                  <h3 data-i18n="dak-c2-title">Pembinaan Ibadah</h3>
+                  <p data-i18n="dak-c2-desc">Pembiasaan shalat berjamaah, dzikir pagi-petang, dan amalan sunnah dalam keseharian siswa.</p>
+                </div>
+                <div class="card">
+                  <div class="card-icon bg-navy"><i class="fa fa-handshake"></i></div>
+                  <h3 data-i18n="dak-c3-title">Dakwah Sosial</h3>
+                  <p data-i18n="dak-c3-desc">Kegiatan bakti sosial, santunan yatim, dan pemberdayaan masyarakat sekitar sebagai wujud Islam rahmatan lil 'alamin.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PAGE: JENJANG SEKOLAH -->
+    <section id="page-jenjang" class="page">
+      <div class="page-hero page-hero-sm">
+        <div class="page-hero-overlay"></div>
+        <div class="page-hero-content">
+          <h1 data-i18n="ph-jenjang-title">Jenjang Sekolah</h1>
+          <p data-i18n="ph-jenjang-sub">Unit pendidikan Islam terpadu di bawah satu naungan</p>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="container">
+          <div class="tabs" id="tabs-jenjang">
+            <button class="tab-btn active" onclick="setTab('jenjang','sdit')" data-i18n="jtab-sdit">SDIT</button>
+            <button class="tab-btn" onclick="setTab('jenjang','smpit')" data-i18n="jtab-smpit">SMPIT</button>
+            <button class="tab-btn" onclick="setTab('jenjang','smk')" data-i18n="jtab-smk">SMK</button>
+            <button class="tab-btn" onclick="setTab('jenjang','madrasah')" data-i18n="jtab-madrasah">Madrasah</button>
+            <button class="tab-btn" onclick="setTab('jenjang','kursus')" data-i18n="jtab-kursus">Kursus B.Inggris</button>
+            <button class="tab-btn" onclick="setTab('jenjang','osis')" data-i18n="jtab-osis">OSIS</button>
+            <button class="tab-btn" onclick="setTab('jenjang','pembinaan')" data-i18n="jtab-pembinaan">Pembinaan</button>
+          </div>
+
+          <!-- SDIT -->
+          <div class="tab-content active" id="tab-jenjang-sdit">
+            <div class="unit-header">
+              <div class="unit-badge bg-green">SD</div>
+              <div>
+                <h2 data-i18n="sdit-h2">SDIT — Sekolah Dasar Islam Terpadu</h2>
+                <p data-i18n="sdit-sub">Fondasi pendidikan Islam untuk usia 6–12 tahun</p>
+              </div>
+            </div>
+            <div class="two-col-layout">
+              <div>
+                <p data-i18n="sdit-desc">SDIT Pluit Raya Jakarta menyelenggarakan pendidikan dasar yang mengintegrasikan kurikulum nasional dengan pendidikan Islam secara menyeluruh. Kami menanamkan nilai-nilai tauhid, akhlak mulia, dan kecintaan kepada Al-Quran sejak dini.</p>
+                <div class="info-boxes">
+                  <div class="info-box"><i class="fa fa-clock"></i><div><strong data-i18n="ib-jam">Jam Belajar</strong><span>Senin – Jumat, 07.00 – 15.00</span></div></div>
+                  <div class="info-box"><i class="fa fa-users"></i><div><strong data-i18n="ib-kelas">Kelas</strong><span>Kelas 1 – 6</span></div></div>
+                  <div class="info-box"><i class="fa fa-certificate"></i><div><strong data-i18n="ib-akred">Akreditasi</strong><span data-i18n="ib-terakred">Terakreditasi</span></div></div>
+                </div>
+              </div>
+              <div>
+                <h4 data-i18n="sdit-prog">Keunggulan Program</h4>
+                <ul class="check-list">
+                  <li><span data-i18n="sdit-f1">Tahfizh Al-Quran (hafalan juz 30)</span></li>
+                  <li><span data-i18n="sdit-f2">Pembelajaran bilingual (Indonesia & Arab)</span></li>
+                  <li><span data-i18n="sdit-f3">Shalat Dhuha dan Dzuhur berjamaah</span></li>
+                  <li><span data-i18n="sdit-f4">Pembiasaan akhlak Islami sehari-hari</span></li>
+                  <li><span data-i18n="sdit-f5">Ekstrakurikuler beragam</span></li>
+                  <li><span data-i18n="sdit-f6">UNBK dan persiapan ke jenjang berikutnya</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- SMPIT -->
+          <div class="tab-content" id="tab-jenjang-smpit">
+            <div class="unit-header">
+              <div class="unit-badge bg-red">SMP</div>
+              <div>
+                <h2 data-i18n="smpit-h2">SMPIT — Sekolah Menengah Pertama Islam Terpadu</h2>
+                <p data-i18n="smpit-sub">Membentuk karakter Islami untuk usia 12–15 tahun</p>
+              </div>
+            </div>
+            <div class="two-col-layout">
+              <div>
+                <p data-i18n="smpit-desc">SMPIT Pluit Raya Jakarta hadir sebagai jenjang lanjutan dengan program pendidikan yang memperkuat pondasi akidah, meningkatkan kemampuan akademik, dan mengembangkan potensi diri siswa secara optimal dalam bingkai nilai-nilai Islam.</p>
+                <div class="info-boxes">
+                  <div class="info-box"><i class="fa fa-clock"></i><div><strong data-i18n="ib-jam">Jam Belajar</strong><span>Senin – Jumat, 07.00 – 15.30</span></div></div>
+                  <div class="info-box"><i class="fa fa-users"></i><div><strong data-i18n="ib-kelas">Kelas</strong><span>Kelas 7 – 9</span></div></div>
+                  <div class="info-box"><i class="fa fa-certificate"></i><div><strong data-i18n="ib-akred">Akreditasi</strong><span data-i18n="ib-terakred">Terakreditasi</span></div></div>
+                </div>
+              </div>
+              <div>
+                <h4 data-i18n="smpit-prog">Keunggulan Program</h4>
+                <ul class="check-list">
+                  <li><span data-i18n="smpit-f1">Lanjutan tahfizh Al-Quran</span></li>
+                  <li><span data-i18n="smpit-f2">Pembelajaran Bahasa Arab & Inggris intensif</span></li>
+                  <li><span data-i18n="smpit-f3">Program Leadership & Character Building</span></li>
+                  <li><span data-i18n="smpit-f4">Persiapan UN dan masuk SMA/SMK terbaik</span></li>
+                  <li><span data-i18n="smpit-f5">Kegiatan dakwah dan kemasyarakatan</span></li>
+                  <li><span data-i18n="smpit-f6">Outing class dan studi banding</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- SMK -->
+          <div class="tab-content" id="tab-jenjang-smk">
+            <div class="unit-header">
+              <div class="unit-badge bg-navy">SMK</div>
+              <div>
+                <h2 data-i18n="smk-h2">SMK — Sekolah Menengah Kejuruan</h2>
+                <p data-i18n="smk-sub">Pendidikan vokasi berbasis Islam untuk masa depan</p>
+              </div>
+            </div>
+            <div class="two-col-layout">
+              <div>
+                <p data-i18n="smk-desc">SMK Pluit Raya Jakarta menyiapkan lulusan yang kompeten di bidang kejuruan, berkarakter Islami, dan siap memasuki dunia kerja atau melanjutkan ke perguruan tinggi. Dengan program keahlian unggulan dan pelatihan praktis.</p>
+                <div class="info-boxes">
+                  <div class="info-box"><i class="fa fa-clock"></i><div><strong data-i18n="ib-jam">Jam Belajar</strong><span>Senin – Jumat, 07.00 – 16.00</span></div></div>
+                  <div class="info-box"><i class="fa fa-users"></i><div><strong data-i18n="ib-kelas">Kelas</strong><span>Kelas 10 – 12</span></div></div>
+                  <div class="info-box"><i class="fa fa-certificate"></i><div><strong data-i18n="ib-akred">Akreditasi</strong><span data-i18n="ib-terakred">Terakreditasi</span></div></div>
+                </div>
+              </div>
+              <div>
+                <h4 data-i18n="smk-prog">Program Keahlian</h4>
+                <ul class="check-list">
+                  <li><span data-i18n="smk-f1">Teknologi Informasi & Komunikasi</span></li>
+                  <li><span data-i18n="smk-f2">Bisnis & Manajemen</span></li>
+                  <li><span data-i18n="smk-f3">Praktek Kerja Industri (PKL)</span></li>
+                  <li><span data-i18n="smk-f4">Sertifikasi kompetensi nasional</span></li>
+                  <li><span data-i18n="smk-f5">Bimbingan karir dan entrepreneurship</span></li>
+                  <li><span data-i18n="smk-f6">Integrasi nilai Islam dalam profesi</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Madrasah Diniyah -->
+          <div class="tab-content" id="tab-jenjang-madrasah">
+            <div class="unit-header">
+              <div class="unit-badge bg-gold">MD</div>
+              <div>
+                <h2 data-i18n="md-h2">Madrasah Diniyah</h2>
+                <p data-i18n="md-sub">Pendalaman ilmu agama Islam secara komprehensif</p>
+              </div>
+            </div>
+            <div class="two-col-layout">
+              <div>
+                <p data-i18n="md-desc">Madrasah Diniyah Pluit Raya menyelenggarakan pendidikan agama Islam secara mendalam, meliputi Al-Quran, Hadits, Fiqih, Akidah, Sejarah Islam, dan Bahasa Arab. Program ini dapat diikuti oleh siswa dari berbagai jenjang.</p>
+                <div class="info-boxes">
+                  <div class="info-box"><i class="fa fa-clock"></i><div><strong data-i18n="ib-jadwal">Jadwal</strong><span>Sore hari, setelah jam sekolah</span></div></div>
+                  <div class="info-box"><i class="fa fa-users"></i><div><strong data-i18n="ib-peserta">Peserta</strong><span data-i18n="ib-terbuka">Terbuka untuk semua usia</span></div></div>
+                </div>
+              </div>
+              <div>
+                <h4 data-i18n="md-prog">Mata Pelajaran</h4>
+                <ul class="check-list">
+                  <li><span data-i18n="md-f1">Al-Quran & Tajwid</span></li>
+                  <li><span data-i18n="md-f2">Hadits & Ulumul Hadits</span></li>
+                  <li><span data-i18n="md-f3">Fiqih Islam</span></li>
+                  <li><span data-i18n="md-f4">Akidah & Tauhid</span></li>
+                  <li><span data-i18n="md-f5">Bahasa Arab</span></li>
+                  <li><span data-i18n="md-f6">Sejarah Islam (Sirah Nabawiyah)</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Kursus -->
+          <div class="tab-content" id="tab-jenjang-kursus">
+            <div class="unit-header">
+              <div class="unit-badge bg-teal">ENG</div>
+              <div>
+                <h2 data-i18n="kursus-h2">Kursus Bahasa Inggris</h2>
+                <p data-i18n="kursus-sub">Memperluas wawasan global dengan kemampuan bahasa internasional</p>
+              </div>
+            </div>
+            <div class="two-col-layout">
+              <div>
+                <p data-i18n="kursus-desc">Program Kursus Bahasa Inggris Pluit Raya dirancang untuk meningkatkan kemampuan berbahasa Inggris siswa secara komprehensif — mulai dari kemampuan percakapan sehari-hari hingga persiapan ujian internasional.</p>
+                <div class="info-boxes">
+                  <div class="info-box"><i class="fa fa-clock"></i><div><strong data-i18n="ib-jadwal">Jadwal</strong><span data-i18n="ib-flex">Fleksibel, pagi & sore</span></div></div>
+                  <div class="info-box"><i class="fa fa-layer-group"></i><div><strong data-i18n="ib-level">Level</strong><span>Beginner – Advanced</span></div></div>
+                </div>
+              </div>
+              <div>
+                <h4 data-i18n="kursus-prog">Program Unggulan</h4>
+                <ul class="check-list">
+                  <li><span data-i18n="kursus-f1">Conversation & Speaking skills</span></li>
+                  <li><span data-i18n="kursus-f2">Reading & Writing proficiency</span></li>
+                  <li><span data-i18n="kursus-f3">Persiapan TOEFL/IELTS</span></li>
+                  <li><span data-i18n="kursus-f4">English for Islamic Studies</span></li>
+                  <li><span data-i18n="kursus-f5">Native-like pronunciation training</span></li>
+                  <li><span data-i18n="kursus-f6">Sertifikat resmi lembaga</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- OSIS -->
+          <div class="tab-content" id="tab-jenjang-osis">
+            <div class="unit-header">
+              <div class="unit-badge bg-purple">OSIS</div>
+              <div>
+                <h2 data-i18n="osis-h2">OSIS — Organisasi Siswa Intra Sekolah</h2>
+                <p data-i18n="osis-sub">Wadah kepemimpinan dan kreativitas siswa</p>
+              </div>
+            </div>
+            <div class="two-col-layout">
+              <div>
+                <p data-i18n="osis-desc">OSIS Sekolah Islam Pluit Raya merupakan organisasi siswa yang aktif dalam merencanakan dan melaksanakan kegiatan sekolah, mengembangkan jiwa kepemimpinan, serta menjadi pelopor kegiatan dakwah di lingkungan sekolah.</p>
+                <div class="info-boxes">
+                  <div class="info-box"><i class="fa fa-users"></i><div><strong data-i18n="ib-anggota">Anggota</strong><span data-i18n="ib-siswa-sel">Siswa SMPIT & SMK terpilih</span></div></div>
+                  <div class="info-box"><i class="fa fa-calendar"></i><div><strong data-i18n="ib-kepen">Kepengurusan</strong><span data-i18n="ib-1-thn">1 tahun periode</span></div></div>
+                </div>
+              </div>
+              <div>
+                <h4 data-i18n="osis-prog">Program OSIS</h4>
+                <ul class="check-list">
+                  <li><span data-i18n="osis-f1">Pekan Olahraga & Seni Sekolah</span></li>
+                  <li><span data-i18n="osis-f2">Peringatan hari besar Islam (PHBI)</span></li>
+                  <li><span data-i18n="osis-f3">Bakti sosial dan santunan yatim</span></li>
+                  <li><span data-i18n="osis-f4">Majalah dinding dan media sekolah</span></li>
+                  <li><span data-i18n="osis-f5">Latihan kepemimpinan (LDKS)</span></li>
+                  <li><span data-i18n="osis-f6">Pekan Perkenalan Sekolah</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pembinaan -->
+          <div class="tab-content" id="tab-jenjang-pembinaan">
+            <div class="unit-header">
+              <div class="unit-badge bg-green">BIN</div>
+              <div>
+                <h2 data-i18n="pem-h2">Pembinaan Siswa</h2>
+                <p data-i18n="pem-sub">Pengembangan karakter dan potensi diri secara holistik</p>
+              </div>
+            </div>
+            <div class="two-col-layout">
+              <div>
+                <p data-i18n="pem-desc">Program Pembinaan Siswa dirancang untuk membentuk karakter Islami yang kuat, mengembangkan potensi diri, serta mempersiapkan siswa menghadapi tantangan kehidupan dengan bekal iman, ilmu, dan amal.</p>
+              </div>
+              <div>
+                <h4 data-i18n="pem-prog">Program Pembinaan</h4>
+                <ul class="check-list">
+                  <li><span data-i18n="pem-f1">Pembinaan akhlak & adab harian</span></li>
+                  <li><span data-i18n="pem-f2">Mentoring dan konseling Islami</span></li>
+                  <li><span data-i18n="pem-f3">Program parenting & kemitraan orang tua</span></li>
+                  <li><span data-i18n="pem-f4">Pembinaan prestasi akademik</span></li>
+                  <li><span data-i18n="pem-f5">Pengembangan bakat & minat</span></li>
+                  <li><span data-i18n="pem-f6">Pelatihan public speaking & dakwah</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- PAGE: PENERIMAAN SISWA -->
+    <section id="page-penerimaan" class="page">
+      <div class="page-hero page-hero-sm">
+        <div class="page-hero-overlay"></div>
+        <div class="page-hero-content">
+          <h1 data-i18n="ph-ppdb-title">Penerimaan Peserta Didik Baru</h1>
+          <p data-i18n="ph-ppdb-sub">Bergabunglah bersama kami untuk tahun ajaran baru</p>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="container">
+          <div class="ppdb-banner">
+            <div class="ppdb-banner-icon"><i class="fa fa-graduation-cap"></i></div>
+            <div>
+              <h2 data-i18n="ppdb-banner-title">Penerimaan Peserta Didik Baru (PPDB)</h2>
+              <p data-i18n="ppdb-banner-desc">Sekolah Islam Pluit Raya membuka pendaftaran untuk seluruh jenjang pendidikan. Segera daftarkan putra-putri Anda!</p>
+            </div>
+          </div>
+
+          <div class="cards-grid cards-grid-3" style="margin-top: 2rem;">
+            <div class="card">
+              <div class="card-icon bg-green"><span class="step-num">1</span></div>
+              <h3 data-i18n="ppdb-step1-title">Pendaftaran</h3>
+              <p data-i18n="ppdb-step1-desc">Isi formulir pendaftaran secara online atau datang langsung ke sekolah. Siapkan dokumen yang diperlukan.</p>
+            </div>
+            <div class="card">
+              <div class="card-icon bg-red"><span class="step-num">2</span></div>
+              <h3 data-i18n="ppdb-step2-title">Seleksi & Tes</h3>
+              <p data-i18n="ppdb-step2-desc">Calon siswa mengikuti tes akademik, tes baca Al-Quran, dan wawancara sesuai jenjang yang dipilih.</p>
+            </div>
+            <div class="card">
+              <div class="card-icon bg-navy"><span class="step-num">3</span></div>
+              <h3 data-i18n="ppdb-step3-title">Pengumuman</h3>
+              <p data-i18n="ppdb-step3-desc">Hasil seleksi diumumkan dan siswa yang diterima melanjutkan proses daftar ulang dan orientasi.</p>
+            </div>
+          </div>
+
+          <div class="two-col-layout" style="margin-top: 3rem;">
+            <div>
+              <h3 data-i18n="ppdb-req-title">Persyaratan Umum</h3>
+              <ul class="check-list">
+                <li><span data-i18n="ppdb-r1">Fotokopi Kartu Keluarga (KK)</span></li>
+                <li><span data-i18n="ppdb-r2">Fotokopi Akte Kelahiran</span></li>
+                <li><span data-i18n="ppdb-r3">Fotokopi Ijazah / Rapor terakhir</span></li>
+                <li><span data-i18n="ppdb-r4">Pas foto 3×4 (4 lembar, background merah)</span></li>
+                <li><span data-i18n="ppdb-r5">Surat keterangan sehat dari dokter</span></li>
+                <li><span data-i18n="ppdb-r6">Mengisi formulir pendaftaran</span></li>
+              </ul>
+
+              <div style="margin-top: 2rem;">
+                <h3 data-i18n="ppdb-level-title">Jenjang yang Tersedia</h3>
+                <div class="level-badges">
+                  <span class="level-badge bg-green">SDIT (Kelas 1)</span>
+                  <span class="level-badge bg-red">SMPIT (Kelas 7)</span>
+                  <span class="level-badge bg-navy">SMK (Kelas 10)</span>
+                  <span class="level-badge bg-gold">Madrasah Diniyah</span>
+                  <span class="level-badge bg-teal">Kursus B. Inggris</span>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="contact-card">
+                <h3><i class="fa fa-phone"></i> <span data-i18n="ppdb-info-title">Informasi Pendaftaran</span></h3>
+                <p data-i18n="ppdb-info-desc">Untuk informasi lebih lanjut mengenai pendaftaran, silakan hubungi kami:</p>
+                <div class="contact-info-list">
+                  <div class="contact-info-item">
+                    <i class="fa fa-phone"></i>
+                    <a href="tel:+62216631914">+62 21 6631914</a>
+                  </div>
+                  <div class="contact-info-item">
+                    <i class="fab fa-whatsapp"></i>
+                    <span data-i18n="ppdb-wa-soon">WhatsApp (akan segera tersedia)</span>
+                  </div>
+                  <div class="contact-info-item">
+                    <i class="fa fa-location-dot"></i>
+                    <span>Jl. Jembatan Tiga No. 1, Penjaringan, Jakarta Utara 14440</span>
+                  </div>
+                  <div class="contact-info-item">
+                    <i class="fa fa-clock"></i>
+                    <span data-i18n="ppdb-hours">Senin – Jumat: 08.00 – 16.00 WIB</span>
+                  </div>
+                </div>
+                <button class="btn btn-primary btn-full" onclick="navigateTo('kontak')" data-i18n="btn-ppdb-contact">Hubungi Kami Sekarang</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- PAGE: INFORMASI -->
+    <section id="page-informasi" class="page">
+      <div class="page-hero page-hero-sm">
+        <div class="page-hero-overlay"></div>
+        <div class="page-hero-content">
+          <h1 data-i18n="ph-info-title">Informasi</h1>
+          <p data-i18n="ph-info-sub">Kenali program dan kehidupan sekolah kami lebih dalam</p>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="container">
+          <div class="tabs" id="tabs-informasi">
+            <button class="tab-btn active" onclick="setTab('informasi','kurikulum')" data-i18n="itab-kurikulum">Kurikulum</button>
+            <button class="tab-btn" onclick="setTab('informasi','ekstra')" data-i18n="itab-ekstra">Ekstrakurikuler</button>
+            <button class="tab-btn" onclick="setTab('informasi','fasilitas')" data-i18n="itab-fasilitas">Fasilitas</button>
+            <button class="tab-btn" onclick="setTab('informasi','kehidupan')" data-i18n="itab-kehidupan">Kehidupan Siswa</button>
+            <button class="tab-btn" onclick="setTab('informasi','prestasi')" data-i18n="itab-prestasi">Prestasi</button>
+          </div>
+
+          <!-- Kurikulum -->
+          <div class="tab-content active" id="tab-informasi-kurikulum">
+            <div class="section-header">
+              <span class="section-tag" data-i18n="kur-tag">Metode Belajar</span>
+              <h2 class="section-title" data-i18n="kur-title">Kurikulum Terpadu</h2>
+              <p class="section-subtitle" data-i18n="kur-sub">Memadukan kurikulum nasional (Kemendikbud) dengan kurikulum pendidikan Islam secara harmonis</p>
+            </div>
+            <div class="cards-grid cards-grid-2">
+              <div class="card card-horizontal">
+                <div class="card-icon-sm bg-green"><i class="fa fa-book"></i></div>
+                <div>
+                  <h4 data-i18n="kur-c1-title">Kurikulum Nasional</h4>
+                  <p data-i18n="kur-c1-desc">Mengikuti kurikulum Merdeka Belajar dari Kemendikbud, memastikan standar pendidikan nasional tercapai dengan baik.</p>
+                </div>
+              </div>
+              <div class="card card-horizontal">
+                <div class="card-icon-sm bg-red"><i class="fa fa-quran"></i></div>
+                <div>
+                  <h4 data-i18n="kur-c2-title">Kurikulum Islam</h4>
+                  <p data-i18n="kur-c2-desc">Integrasi Al-Quran, Hadits, Fiqih, Akidah, dan Bahasa Arab dalam setiap aspek pembelajaran.</p>
+                </div>
+              </div>
+              <div class="card card-horizontal">
+                <div class="card-icon-sm bg-navy"><i class="fa fa-laptop"></i></div>
+                <div>
+                  <h4 data-i18n="kur-c3-title">Teknologi & Digital</h4>
+                  <p data-i18n="kur-c3-desc">Pembelajaran berbasis teknologi dengan pemanfaatan media digital yang bijak sesuai nilai Islam.</p>
+                </div>
+              </div>
+              <div class="card card-horizontal">
+                <div class="card-icon-sm bg-gold"><i class="fa fa-heart"></i></div>
+                <div>
+                  <h4 data-i18n="kur-c4-title">Pendidikan Karakter</h4>
+                  <p data-i18n="kur-c4-desc">Pembentukan karakter Islami melalui pembiasaan, keteladanan, dan program pembinaan terstruktur.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Ekstrakurikuler -->
+          <div class="tab-content" id="tab-informasi-ekstra">
+            <div class="section-header">
+              <span class="section-tag" data-i18n="eks-tag">Pengembangan Bakat</span>
+              <h2 class="section-title" data-i18n="eks-title">Ekstrakurikuler</h2>
+            </div>
+            <div class="ekstra-grid">
+              <div class="ekstra-item"><i class="fa fa-futbol"></i><span>Sepak Bola</span></div>
+              <div class="ekstra-item"><i class="fa fa-table-tennis-paddle-ball"></i><span>Bulu Tangkis</span></div>
+              <div class="ekstra-item"><i class="fa fa-person-running"></i><span>Atletik</span></div>
+              <div class="ekstra-item"><i class="fa fa-music"></i><span>Nasyid Islami</span></div>
+              <div class="ekstra-item"><i class="fa fa-microphone"></i><span>Pildacil & Pidato</span></div>
+              <div class="ekstra-item"><i class="fa fa-book-quran"></i><span>Tahfizh Quran</span></div>
+              <div class="ekstra-item"><i class="fa fa-palette"></i><span>Seni Kaligrafi</span></div>
+              <div class="ekstra-item"><i class="fa fa-pen-nib"></i><span>Mading & Jurnalistik</span></div>
+              <div class="ekstra-item"><i class="fa fa-laptop-code"></i><span>Robotika & IT</span></div>
+              <div class="ekstra-item"><i class="fa fa-shield"></i><span>Pramuka</span></div>
+              <div class="ekstra-item"><i class="fa fa-hand-fist"></i><span>Pencak Silat</span></div>
+              <div class="ekstra-item"><i class="fa fa-language"></i><span>English Club</span></div>
+            </div>
+          </div>
+
+          <!-- Fasilitas -->
+          <div class="tab-content" id="tab-informasi-fasilitas">
+            <div class="section-header">
+              <span class="section-tag" data-i18n="fas-tag">Sarana & Prasarana</span>
+              <h2 class="section-title" data-i18n="fas-title">Fasilitas Sekolah</h2>
+            </div>
+            <div class="cards-grid cards-grid-3">
+              <div class="card text-center">
+                <div class="card-icon bg-green mx-auto"><i class="fa fa-mosque"></i></div>
+                <h4 data-i18n="fas-c1-title">Masjid / Mushalla</h4>
+                <p data-i18n="fas-c1-desc">Tempat ibadah dan kegiatan keagamaan yang nyaman dan representatif</p>
+              </div>
+              <div class="card text-center">
+                <div class="card-icon bg-red mx-auto"><i class="fa fa-flask"></i></div>
+                <h4 data-i18n="fas-c2-title">Laboratorium</h4>
+                <p data-i18n="fas-c2-desc">Lab IPA, komputer, dan bahasa yang dilengkapi peralatan modern</p>
+              </div>
+              <div class="card text-center">
+                <div class="card-icon bg-navy mx-auto"><i class="fa fa-book"></i></div>
+                <h4 data-i18n="fas-c3-title">Perpustakaan</h4>
+                <p data-i18n="fas-c3-desc">Koleksi buku umum dan Islam yang lengkap untuk mendukung pembelajaran</p>
+              </div>
+              <div class="card text-center">
+                <div class="card-icon bg-gold mx-auto"><i class="fa fa-basketball"></i></div>
+                <h4 data-i18n="fas-c4-title">Lapangan Olahraga</h4>
+                <p data-i18n="fas-c4-desc">Lapangan serbaguna untuk berbagai kegiatan olahraga dan ekstrakurikuler</p>
+              </div>
+              <div class="card text-center">
+                <div class="card-icon bg-teal mx-auto"><i class="fa fa-utensils"></i></div>
+                <h4 data-i18n="fas-c5-title">Kantin Halal</h4>
+                <p data-i18n="fas-c5-desc">Kantin bersih dengan menu halal dan bergizi untuk mendukung kesehatan siswa</p>
+              </div>
+              <div class="card text-center">
+                <div class="card-icon bg-purple mx-auto"><i class="fa fa-computer"></i></div>
+                <h4 data-i18n="fas-c6-title">Ruang Multimedia</h4>
+                <p data-i18n="fas-c6-desc">Ruang belajar multimedia modern untuk kegiatan presentasi dan pembelajaran digital</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Kehidupan Siswa -->
+          <div class="tab-content" id="tab-informasi-kehidupan">
+            <div class="section-header">
+              <span class="section-tag" data-i18n="keh-tag">Aktivitas Harian</span>
+              <h2 class="section-title" data-i18n="keh-title">Kehidupan Siswa</h2>
+              <p class="section-subtitle" data-i18n="keh-sub">Sehari-hari bersama kami, siswa menjalani rutinitas yang menyeimbangkan ilmu, ibadah, dan kegiatan positif</p>
+            </div>
+            <div class="daily-schedule">
+              <div class="schedule-item">
+                <div class="schedule-time">06.30</div>
+                <div class="schedule-content">
+                  <h4 data-i18n="keh-s1-h">Penerimaan Siswa & Pembinaan Pagi</h4>
+                  <p data-i18n="keh-s1-p">Siswa disambut guru, melaksanakan dzikir pagi dan muroja'ah Al-Quran bersama</p>
+                </div>
+              </div>
+              <div class="schedule-item">
+                <div class="schedule-time">07.00</div>
+                <div class="schedule-content">
+                  <h4 data-i18n="keh-s2-h">Kegiatan Belajar Mengajar</h4>
+                  <p data-i18n="keh-s2-p">Pembelajaran akademik sesuai kurikulum nasional dan Islam terpadu</p>
+                </div>
+              </div>
+              <div class="schedule-item">
+                <div class="schedule-time">09.30</div>
+                <div class="schedule-content">
+                  <h4 data-i18n="keh-s3-h">Shalat Dhuha Berjamaah</h4>
+                  <p data-i18n="keh-s3-p">Pembiasaan shalat sunnah dhuha yang membentuk kedekatan siswa dengan Allah SWT</p>
+                </div>
+              </div>
+              <div class="schedule-item">
+                <div class="schedule-time">12.00</div>
+                <div class="schedule-content">
+                  <h4 data-i18n="keh-s4-h">Shalat Dzuhur Berjamaah & Makan Siang</h4>
+                  <p data-i18n="keh-s4-p">Shalat berjamaah dilanjutkan istirahat makan siang dengan menu halal</p>
+                </div>
+              </div>
+              <div class="schedule-item">
+                <div class="schedule-time">13.00</div>
+                <div class="schedule-content">
+                  <h4 data-i18n="keh-s5-h">Lanjutan KBM & Ekstrakurikuler</h4>
+                  <p data-i18n="keh-s5-p">Sesi belajar siang dan kegiatan pengembangan bakat minat siswa</p>
+                </div>
+              </div>
+              <div class="schedule-item">
+                <div class="schedule-time">15.30</div>
+                <div class="schedule-content">
+                  <h4 data-i18n="keh-s6-h">Shalat Ashar & Kepulangan</h4>
+                  <p data-i18n="keh-s6-p">Shalat Ashar berjamaah sebelum siswa dijemput pulang</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Prestasi -->
+          <div class="tab-content" id="tab-informasi-prestasi">
+            <div class="section-header">
+              <span class="section-tag" data-i18n="pre-tag">Kebanggaan Kami</span>
+              <h2 class="section-title" data-i18n="pre-title">Prestasi Sekolah</h2>
+              <p class="section-subtitle" data-i18n="pre-sub">Berbagai pencapaian membanggakan dari siswa dan sekolah kami</p>
+            </div>
+            <div class="cards-grid cards-grid-3">
+              <div class="achievement-card">
+                <div class="achievement-icon"><i class="fa fa-trophy"></i></div>
+                <span class="achievement-level gold" data-i18n="pre-lv1">Juara Tingkat Kota</span>
+                <h4 data-i18n="pre-c1-title">Olimpiade Matematika</h4>
+                <p data-i18n="pre-c1-desc">Siswa kami meraih kejuaraan olimpiade matematika tingkat kota Jakarta</p>
+              </div>
+              <div class="achievement-card">
+                <div class="achievement-icon"><i class="fa fa-award"></i></div>
+                <span class="achievement-level silver" data-i18n="pre-lv2">Juara Tingkat Kota</span>
+                <h4 data-i18n="pre-c2-title">Musabaqah Tilawatil Quran</h4>
+                <p data-i18n="pre-c2-desc">Prestasi luar biasa dalam kompetisi tilawah Al-Quran tingkat kota</p>
+              </div>
+              <div class="achievement-card">
+                <div class="achievement-icon"><i class="fa fa-medal"></i></div>
+                <span class="achievement-level bronze" data-i18n="pre-lv3">Juara Tingkat Provinsi</span>
+                <h4 data-i18n="pre-c3-title">Pildacil & Pidato Islam</h4>
+                <p data-i18n="pre-c3-desc">Siswa kami juara dalam lomba pidato dakwah Islam tingkat provinsi</p>
+              </div>
+              <div class="achievement-card">
+                <div class="achievement-icon"><i class="fa fa-star"></i></div>
+                <span class="achievement-level gold" data-i18n="pre-lv4">Juara Tingkat Nasional</span>
+                <h4 data-i18n="pre-c4-title">Tahfizh Al-Quran</h4>
+                <p data-i18n="pre-c4-desc">Hafizh muda dari sekolah kami meraih prestasi nasional dalam kompetisi tahfizh</p>
+              </div>
+              <div class="achievement-card">
+                <div class="achievement-icon"><i class="fa fa-futbol"></i></div>
+                <span class="achievement-level silver" data-i18n="pre-lv5">Juara Tingkat Kota</span>
+                <h4 data-i18n="pre-c5-title">Turnamen Sepak Bola Pelajar</h4>
+                <p data-i18n="pre-c5-desc">Tim sepak bola sekolah juara dalam turnamen pelajar tingkat Jakarta Utara</p>
+              </div>
+              <div class="achievement-card">
+                <div class="achievement-icon"><i class="fa fa-palette"></i></div>
+                <span class="achievement-level gold" data-i18n="pre-lv6">Juara Tingkat Provinsi</span>
+                <h4 data-i18n="pre-c6-title">Lomba Kaligrafi Islam</h4>
+                <p data-i18n="pre-c6-desc">Karya kaligrafi terbaik dari siswa kami meraih penghargaan tingkat provinsi</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- PAGE: GURU & STAF -->
+    <section id="page-guru-staf" class="page">
+      <div class="page-hero page-hero-sm">
+        <div class="page-hero-overlay"></div>
+        <div class="page-hero-content">
+          <h1 data-i18n="ph-guru-title">Guru & Tenaga Kependidikan</h1>
+          <p data-i18n="ph-guru-sub">Pendidik berdedikasi yang siap membimbing generasi terbaik</p>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="container">
+
+          <div class="section-header">
+            <span class="section-tag" data-i18n="guru-tag">Tim Kami</span>
+            <h2 class="section-title" data-i18n="guru-title">Tenaga Pendidik & Staf</h2>
+            <p class="section-subtitle" data-i18n="guru-sub">Guru-guru kami adalah para profesional berdedikasi dengan latar belakang pendidikan terbaik dan komitmen penuh terhadap nilai-nilai Islam</p>
+          </div>
+
+          <div class="staff-categories">
+            <div class="staff-category">
+              <h3><i class="fa fa-user-tie"></i> <span data-i18n="guru-pimpinan">Pimpinan Sekolah</span></h3>
+              <div class="staff-grid">
+                <div class="staff-card">
+                  <div class="staff-avatar"><i class="fa fa-user"></i></div>
+                  <h4 data-i18n="guru-kepsdit">Kepala Sekolah SDIT</h4>
+                  <p data-i18n="guru-kepsdit-desc">Bertanggung jawab atas pengelolaan dan pengembangan SDIT Pluit Raya Jakarta</p>
+                </div>
+                <div class="staff-card">
+                  <div class="staff-avatar"><i class="fa fa-user"></i></div>
+                  <h4 data-i18n="guru-kepsmpit">Kepala Sekolah SMPIT</h4>
+                  <p data-i18n="guru-kepsmpit-desc">Memimpin dan mengembangkan SMPIT Pluit Raya Jakarta menuju keunggulan</p>
+                </div>
+                <div class="staff-card">
+                  <div class="staff-avatar"><i class="fa fa-user"></i></div>
+                  <h4 data-i18n="guru-kepsmk">Kepala Sekolah SMK</h4>
+                  <p data-i18n="guru-kepsmk-desc">Memimpin SMK Pluit Raya dengan visi pendidikan vokasi Islami berkualitas</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="staff-category">
+              <h3><i class="fa fa-chalkboard-teacher"></i> <span data-i18n="guru-mapel">Guru Mata Pelajaran</span></h3>
+              <div class="staff-placeholder">
+                <i class="fa fa-users fa-3x"></i>
+                <p data-i18n="guru-ph-desc">Kami memiliki lebih dari 50 tenaga pendidik berpengalaman, bersertifikasi, dan berdedikasi tinggi dalam mendidik generasi Islam yang berkualitas.</p>
+                <div class="staff-stats">
+                  <div class="staff-stat"><span class="stat-number">50+</span><span data-i18n="guru-stat-label1">Guru & Staf</span></div>
+                  <div class="staff-stat"><span class="stat-number">S1/S2</span><span data-i18n="guru-stat-label2">Kualifikasi</span></div>
+                  <div class="staff-stat"><span class="stat-number">100%</span><span data-i18n="guru-stat-label3">Bersertifikasi</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Karir -->
+          <div class="karir-section">
+            <div class="karir-content">
+              <div class="karir-icon"><i class="fa fa-briefcase"></i></div>
+              <div>
+                <h3 data-i18n="karir-title">Bergabunglah Bersama Kami</h3>
+                <p data-i18n="karir-desc">Kami membuka kesempatan bagi tenaga pendidik dan kependidikan yang berdedikasi, kompeten, dan memiliki komitmen terhadap nilai-nilai Islam untuk bergabung dalam tim kami.</p>
+                <div class="karir-requirements">
+                  <div>
+                    <h4 data-i18n="karir-req-title">Kualifikasi Umum:</h4>
+                    <ul class="check-list compact">
+                      <li><span data-i18n="karir-r1">Beragama Islam dan berakhlak baik</span></li>
+                      <li><span data-i18n="karir-r2">Minimal lulusan S1 sesuai bidang</span></li>
+                      <li><span data-i18n="karir-r3">Memiliki kemampuan mengajar yang baik</span></li>
+                      <li><span data-i18n="karir-r4">Berpengalaman di bidang pendidikan Islam (diutamakan)</span></li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 data-i18n="karir-pos-title">Posisi Tersedia:</h4>
+                    <ul class="check-list compact">
+                      <li><span data-i18n="karir-p1">Guru Mata Pelajaran (semua bidang)</span></li>
+                      <li><span data-i18n="karir-p2">Guru Al-Quran & Tahfizh</span></li>
+                      <li><span data-i18n="karir-p3">Staf Administrasi & Tata Usaha</span></li>
+                      <li><span data-i18n="karir-p4">Pembina Ekstrakurikuler</span></li>
+                    </ul>
+                  </div>
+                </div>
+                <button class="btn btn-primary" onclick="navigateTo('kontak')" data-i18n="btn-karir">Kirim Lamaran <i class="fa fa-arrow-right"></i></button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- PAGE: KONTAK -->
+    <section id="page-kontak" class="page">
+      <div class="page-hero page-hero-sm">
+        <div class="page-hero-overlay"></div>
+        <div class="page-hero-content">
+          <h1 data-i18n="ph-kontak-title">Kontak Kami</h1>
+          <p data-i18n="ph-kontak-sub">Kami siap membantu Anda — jangan ragu untuk menghubungi kami</p>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="container">
+          <div class="kontak-layout">
+            <!-- Info Kontak -->
+            <div class="kontak-info">
+              <h2 data-i18n="kontak-info-title">Informasi Kontak</h2>
+
+              <div class="kontak-item">
+                <div class="kontak-icon bg-green"><i class="fa fa-location-dot"></i></div>
+                <div>
+                  <h4 data-i18n="kontak-addr-label">Alamat</h4>
+                  <p>Jalan Jembatan Tiga No. 1, RT.14/RW.8,<br>Penjaringan, Kecamatan Penjaringan,<br>Jakarta Utara, DKI Jakarta 14440</p>
+                </div>
+              </div>
+
+              <div class="kontak-item">
+                <div class="kontak-icon bg-red"><i class="fa fa-phone"></i></div>
+                <div>
+                  <h4 data-i18n="kontak-phone-label">Telepon</h4>
+                  <a href="tel:+62216631914" class="kontak-link">+62 21 6631914</a>
+                </div>
+              </div>
+
+              <div class="kontak-item">
+                <div class="kontak-icon bg-navy"><i class="fa fa-envelope"></i></div>
+                <div>
+                  <h4 data-i18n="kontak-email-label">Email</h4>
+                  <a href="mailto:info@sekolahislampluitraya.sch.id" class="kontak-link">info@sekolahislampluitraya.sch.id</a>
+                </div>
+              </div>
+
+              <div class="kontak-item">
+                <div class="kontak-icon bg-green"><i class="fab fa-whatsapp"></i></div>
+                <div>
+                  <h4 data-i18n="kontak-wa-label">WhatsApp Admin</h4>
+                  <p data-i18n="kontak-wa-soon">Segera tersedia — hubungi melalui telepon sementara ini</p>
+                </div>
+              </div>
+
+              <div class="kontak-jam">
+                <h4><i class="fa fa-clock"></i> <span data-i18n="kontak-jam-title">Jam Operasional</span></h4>
+                <table class="jam-table">
+                  <tr><td data-i18n="kontak-jam-row1-day">Senin – Jumat</td><td>07.00 – 16.00 WIB</td></tr>
+                  <tr><td data-i18n="kontak-jam-row2-day">Sabtu</td><td>08.00 – 12.00 WIB</td></tr>
+                  <tr><td data-i18n="kontak-jam-row3-day">Minggu & Hari Libur</td><td data-i18n="kontak-jam-row3-val">Tutup</td></tr>
+                </table>
+              </div>
+
+              <div class="social-media-section">
+                <h4 data-i18n="kontak-social-title">Ikuti Kami di Media Sosial</h4>
+                <div class="social-links">
+                  <a href="#" class="social-btn instagram"><i class="fab fa-instagram"></i> Instagram</a>
+                  <a href="#" class="social-btn facebook"><i class="fab fa-facebook"></i> Facebook</a>
+                  <a href="#" class="social-btn youtube"><i class="fab fa-youtube"></i> YouTube</a>
+                  <a href="#" class="social-btn tiktok"><i class="fab fa-tiktok"></i> TikTok</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Map -->
+            <div class="kontak-map">
+              <h2 data-i18n="kontak-map-title">Lokasi Kami</h2>
+              <div class="map-container">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.8041388!2d106.8037!3d-6.1354!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6a1df9cef0c7c3%3A0x4e3c3e3f2a2b2c2d!2sJl.%20Jembatan%20Tiga%20No.1%2C%20RT.14%2FRW.8%2C%20Penjaringan%2C%20Kec.%20Penjaringan%2C%20Kota%20Jkt%20Utara%2C%20Daerah%20Khusus%20Ibukota%20Jakarta%2014440!5e0!3m2!1sid!2sid!4v1699999999999!5m2!1sid!2sid"
+                  width="100%"
+                  height="450"
+                  style="border:0;"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                  title="Lokasi Sekolah Islam Pluit Raya Jakarta">
+                </iframe>
+              </div>
+              <a href="https://maps.app.goo.gl/SfTbYP6HLrR1qkPk6" target="_blank" class="btn btn-outline btn-full map-btn">
+                <i class="fa fa-map-marker-alt"></i> <span data-i18n="btn-maps">Buka di Google Maps</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer-top">
+        <div class="container">
+          <div class="footer-grid">
+            <div class="footer-brand">
+              <img src="images/logo-smpit.png" alt="Logo" class="footer-logo">
+              <div>
+                <h3>Sekolah Islam Pluit Raya</h3>
+                <p>Jakarta Utara</p>
+              </div>
+              <p class="footer-desc" data-i18n="footer-desc">Membentuk generasi Islam yang berilmu, berakhlak mulia, dan siap berkontribusi untuk agama dan bangsa.</p>
+              <p class="arabic-footer">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ</p>
+            </div>
+            <div class="footer-links">
+              <h4 data-i18n="footer-nav-title">Halaman</h4>
+              <ul>
+                <li><a href="#" onclick="navigateTo('beranda')" data-i18n="footer-nav-beranda">Beranda</a></li>
+                <li><a href="#" onclick="navigateTo('profil')" data-i18n="footer-nav-profil">Profil</a></li>
+                <li><a href="#" onclick="navigateTo('jenjang')" data-i18n="footer-nav-jenjang">Jenjang Sekolah</a></li>
+                <li><a href="#" onclick="navigateTo('penerimaan')" data-i18n="footer-nav-penerimaan">Penerimaan Siswa</a></li>
+                <li><a href="#" onclick="navigateTo('informasi')" data-i18n="footer-nav-informasi">Informasi</a></li>
+                <li><a href="#" onclick="navigateTo('guru-staf')" data-i18n="footer-nav-guru">Guru & Staf</a></li>
+                <li><a href="#" onclick="navigateTo('kontak')" data-i18n="footer-nav-kontak">Kontak</a></li>
+              </ul>
+            </div>
+            <div class="footer-links">
+              <h4 data-i18n="footer-unit-title">Unit Pendidikan</h4>
+              <ul>
+                <li><a href="#" onclick="navigateTo('jenjang'); setTab('jenjang','sdit')">SDIT</a></li>
+                <li><a href="#" onclick="navigateTo('jenjang'); setTab('jenjang','smpit')">SMPIT</a></li>
+                <li><a href="#" onclick="navigateTo('jenjang'); setTab('jenjang','smk')">SMK</a></li>
+                <li><a href="#" onclick="navigateTo('jenjang'); setTab('jenjang','madrasah')">Madrasah Diniyah</a></li>
+                <li><a href="#" onclick="navigateTo('jenjang'); setTab('jenjang','kursus')">Kursus B. Inggris</a></li>
+              </ul>
+            </div>
+            <div class="footer-links">
+              <h4 data-i18n="footer-contact-title">Hubungi Kami</h4>
+              <ul>
+                <li><i class="fa fa-location-dot"></i> Jl. Jembatan Tiga No. 1, Penjaringan, Jakarta Utara 14440</li>
+                <li><i class="fa fa-phone"></i> <a href="tel:+62216631914">+62 21 6631914</a></li>
+                <li><i class="fa fa-envelope"></i> info@sekolahislampluitraya.sch.id</li>
+              </ul>
+              <div class="footer-social">
+                <a href="#" class="footer-social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="footer-social-icon"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="footer-social-icon"><i class="fab fa-youtube"></i></a>
+                <a href="#" class="footer-social-icon"><i class="fab fa-tiktok"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container">
+          <p data-i18n="footer-copy">© 2025 Sekolah Islam Pluit Raya Jakarta. Hak Cipta Dilindungi.</p>
+          <p>Jl. Jembatan Tiga No. 1, Penjaringan, Jakarta Utara 14440</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/62216631914" target="_blank" class="whatsapp-float" title="Chat via WhatsApp">
+      <i class="fab fa-whatsapp"></i>
+      <span class="whatsapp-tooltip">Chat WhatsApp Admin</span>
+    </a>
+
+    <script src="main.js"></script>
+  </body>
+</html>
