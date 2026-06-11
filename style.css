@@ -169,6 +169,7 @@ h4 { font-size: 1.1rem; }
   display: flex;
   align-items: center;
   gap: 0.25rem;
+  z-index: 999;
 }
 
 .nav-link {
@@ -188,6 +189,74 @@ h4 { font-size: 1.1rem; }
 .nav-link.active {
   color: var(--green-dark);
   background: rgba(27, 94, 32, 0.07);
+}
+
+@media (max-width: 768px) {
+
+  .nav-container {
+    padding: 0 1rem;
+  }
+
+  .nav-brand {
+    min-width: 0;
+    flex: 1;
+  }
+
+  .nav-logo {
+    height: 40px;
+  }
+
+  .brand-main {
+    font-size: 0.85rem;
+  }
+
+  .brand-sub {
+    font-size: 0.65rem;
+  }
+
+  .hamburger {
+    display: flex;
+    flex-shrink: 0;
+    z-index: 1100;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: var(--navbar-h);
+    left: 0;
+    right: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    background: var(--white);
+    border-top: 1px solid var(--border-color);
+    box-shadow: var(--shadow-md);
+
+    padding: 1rem;
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+
+    z-index: 999;
+  }
+
+  .nav-links.open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+
+  .nav-link {
+    width: 100%;
+    padding: 0.9rem 1rem;
+  }
+
 }
 
 /* Dropdown */
@@ -1680,11 +1749,13 @@ h4 { font-size: 1.1rem; }
 .footer-brand h3 {
   font-size: 1rem;
   color: var(--white);
+  text-align: center;
 }
 
 .footer-brand > div p {
   font-size: 0.8rem;
   color: rgba(255,255,255,0.6);
+  text-align: center;
 }
 
 .footer-desc {
@@ -1692,6 +1763,7 @@ h4 { font-size: 1.1rem; }
   line-height: 1.7;
   color: rgba(255,255,255,0.65);
   margin-top: 0.5rem;
+  text-align: center;
 }
 
 .arabic-footer {
@@ -1699,6 +1771,7 @@ h4 { font-size: 1.1rem; }
   font-size: 1.1rem;
   color: rgba(255,255,255,0.5);
   margin-top: 0.5rem;
+  text-align: center;
 }
 
 .footer-links h4 {
@@ -1879,6 +1952,7 @@ h4 { font-size: 1.1rem; }
     top: var(--navbar-h);
     left: 0;
     right: 0;
+    pointer-events: none;
     background: var(--white);
     flex-direction: column;
     align-items: stretch;
@@ -1894,6 +1968,7 @@ h4 { font-size: 1.1rem; }
 
   .nav-links.open {
     transform: translateY(0);
+    pointer-events: auto;
   }
 
   .nav-link {
