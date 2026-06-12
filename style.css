@@ -192,28 +192,71 @@ h4 { font-size: 1.1rem; }
 }
 
 @media (max-width: 768px) {
-
   .nav-container {
     padding: 0 1rem;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
   }
 
+  /* 1. UNHIDE AND LOCK THE LOGO WRAPPER ROW */
   .nav-brand {
-    min-width: 0;
-    flex: 1;
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    min-width: 0 !important;
+    flex: 1 !important;
+    max-width: 60% !important; /* Leaves room for buttons on the right */
   }
 
   .nav-logo {
-    height: 40px;
+    height: 36px !important;
+    width: auto !important;
+    flex-shrink: 0 !important;
+    display: block !important;
   }
 
+  /* 2. FORCE UNHIDE THE TEXT CONTAINER LAYER */
+  /* If your text classes are inside a div (like .brand-text or similar), unhide it here: */
+  .nav-brand div, 
+  .brand-text {
+    display: flex !important;
+    flex-direction: column !important;
+    min-width: 0 !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+
+  /* 3. HARD RESET THE TEXT ENTRIES */
   .brand-main {
-    font-size: 0.85rem;
+    display: block !important;          /* Overrides any global hidden/none settings */
+    visibility: visible !important;
+    opacity: 1 !important;
+    font-size: 0.82rem !important;
+    font-weight: 700 !important;
+    line-height: 1.2 !important;
+    white-space: normal !important;     /* Forces the text lines to wrap instead of vanish */
+    color: #0b1b3d !important;          /* Standard dark color rule over white background */
   }
 
   .brand-sub {
-    font-size: 0.65rem;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    font-size: 0.62rem !important;
+    line-height: 1.2 !important;
+    white-space: normal !important;
+    color: #666666 !important;
   }
 
+  /* 4. CHOP DOWN BUTTONS TO REGAIN MOBILE LANDSCAPE SPACE */
+  /* If you have a language toggle container, shrink it down slightly so the logo has room */
+  .lang-switcher, .nav-lang { 
+    font-size: 0.8rem !important;
+    gap: 4px !important;
+  }
+
+  /* --- Keeping your normal navigation items unchanged --- */
   .hamburger {
     display: flex;
     flex-shrink: 0;
@@ -225,23 +268,17 @@ h4 { font-size: 1.1rem; }
     top: var(--navbar-h);
     left: 0;
     right: 0;
-
     display: flex;
     flex-direction: column;
-
     background: var(--white);
     border-top: 1px solid var(--border-color);
     box-shadow: var(--shadow-md);
-
     padding: 1rem;
-
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
-
     transform: translateY(-10px);
     transition: all 0.3s ease;
-
     z-index: 999;
   }
 
@@ -256,8 +293,8 @@ h4 { font-size: 1.1rem; }
     width: 100%;
     padding: 0.9rem 1rem;
   }
-
 }
+
 
 /* Dropdown */
 .dropdown {
@@ -410,13 +447,14 @@ h4 { font-size: 1.1rem; }
   position: absolute;
   inset: 0;
   background: linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.1) 100%);
+  padding-top: 10px;
 }
 
 .hero-content {
   position: relative;
   z-index: 2;
   max-width: 750px;
-  padding: 2rem 1.5rem;
+  padding: 6px 14px;
   animation: fadeInUp 0.8s ease;
 }
 
@@ -474,6 +512,29 @@ h4 { font-size: 1.1rem; }
   from { opacity: 0; transform: translateY(30px); }
   to { opacity: 1; transform: translateY(0); }
 }
+
+@media (max-width: 768px) {
+  /* 1. SHRINK THE OVERALL HERO CONTAINER HEIGHT */
+  .hero {
+    min-height: auto !important; /* Removes the forced full-screen height */
+    padding-top: 100px !important;  /* Controls the exact empty space at the top */
+    padding-bottom: 120px !important; /* Controls the exact empty space at the bottom */
+  }
+
+  /* 2. TIGHTEN THE VERTICAL GAPS BETWEEN ELEMENTS */
+  .hero-badge {
+    margin-bottom: 1rem !important; /* Pulls the main title closer to the Arabic text */
+  }
+
+  .hero-title {
+    margin-bottom: 0.75rem !important; /* Pulls the subtitle description closer to the title */
+  }
+
+  .hero-subtitle {
+    margin-bottom: 2rem !important; /* Pulls the buttons closer to the subtitle text */
+  }
+}
+
 
 /* --- PAGE HERO (inner pages) --- */
 .page-hero {
