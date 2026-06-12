@@ -192,22 +192,28 @@ h4 { font-size: 1.1rem; }
 }
 
 @media (max-width: 768px) {
+  /* Option A: Increase the side spacing of the whole bar */
   .nav-container {
-    padding: 0 1rem;
+    padding-left: 2rem !important; /* Increased from 1rem to push everything inward */
+    padding-right: 1rem;
     display: flex !important;
     align-items: center !important;
     justify-content: space-between !important;
   }
 
-  /* 1. UNHIDE AND LOCK THE LOGO WRAPPER ROW */
+  /* Option B: Physically nudge just the logo area to the right */
   .nav-brand {
     display: flex !important;
     align-items: center !important;
     gap: 8px !important;
     min-width: 0 !important;
     flex: 1 !important;
-    max-width: 60% !important; /* Leaves room for buttons on the right */
+    max-width: 60% !important;
+    
+    /* The Magic Trick: Nudge it just a bit from the left wall */
+    margin-left: 16px !important; 
   }
+}
 
   .nav-logo {
     height: 36px !important;
@@ -517,8 +523,8 @@ h4 { font-size: 1.1rem; }
   /* 1. SHRINK THE OVERALL HERO CONTAINER HEIGHT */
   .hero {
     min-height: auto !important; /* Removes the forced full-screen height */
-    padding-top: 100px !important;  /* Controls the exact empty space at the top */
-    padding-bottom: 120px !important; /* Controls the exact empty space at the bottom */
+    padding-top: 50px !important;  /* Controls the exact empty space at the top */
+    padding-bottom: 85px !important; /* Controls the exact empty space at the bottom */
   }
 
   /* 2. TIGHTEN THE VERTICAL GAPS BETWEEN ELEMENTS */
@@ -613,6 +619,31 @@ h4 { font-size: 1.1rem; }
   height: 40px;
   background: rgba(255,255,255,0.25);
 }
+
+@media (max-width: 768px) {
+  /* 1. SWAP THE FLEX CONTAINER INTO A STRICT 2X2 GRID TRACK */
+  .stats-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important; /* Creates exactly 2 equal columns */
+    gap: 1.5rem 0 !important;                        /* Adds a clean 1.5rem vertical gap between rows */
+    width: 100% !important;
+    max-width: 480px !important;                     /* Keeps the boxes grouped tightly together */
+    margin: 0 auto !important;                       /* Centers the entire 2x2 grid on the screen */
+  }
+
+  /* 2. OPTIMIZE PADDING FOR MOBILE SCREEN DIMENSIONS */
+  .stat-item {
+    padding: 0.5rem 1rem !important;                 /* Reduces large horizontal padding to fit mobile screens */
+    width: 100% !important;
+  }
+
+  /* 3. HIDE THE THIN DIVIDER LINES ON MOBILE LAYOUTS */
+  /* In a 2x2 square grid, these single vertical bars will float awkwardly and break layout balance */
+  .stat-divider {
+    display: none !important; 
+  }
+}
+
 
 /* --- SECTIONS --- */
 .section {
