@@ -194,7 +194,7 @@ h4 { font-size: 1.1rem; }
 @media (max-width: 768px) {
   /* Option A: Increase the side spacing of the whole bar */
   .nav-container {
-    padding-left: 2rem !important; /* Increased from 1rem to push everything inward */
+    padding-left: 1rem !important; /* Increased from 1rem to push everything inward */
     padding-right: 1rem;
     display: flex !important;
     align-items: center !important;
